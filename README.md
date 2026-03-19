@@ -1,37 +1,37 @@
-# Order Management API
+# API de Gerenciamento de Pedidos
 
-Simple fictional backend project built with **Java + Quarkus** to simulate a real-world order management system.
+Projeto backend fictício desenvolvido com **Java + Quarkus**, simulando uma API real de gerenciamento de pedidos utilizada em sistemas de e-commerce, delivery ou fintech.
 
-This project was created as a portfolio piece focused on backend development concepts commonly used in companies such as banks, fintechs, e-commerce and delivery platforms.
+Este projeto foi criado como peça de portfólio, demonstrando conceitos essenciais de desenvolvimento backend utilizados por empresas e bancos.
 
 ---
 
-## Tech Stack
+## 🚀 Tecnologias Utilizadas
 
 * Java 21
 * Quarkus
 * REST API (Jakarta REST)
-* Hibernate ORM with Panache
-* H2 Database (in-memory)
+* Hibernate ORM com Panache
+* Banco H2 (em memória)
 * Bean Validation
 * Swagger / OpenAPI
 * Maven
 
 ---
 
-## Features
+## ✅ Funcionalidades
 
-* Create orders with multiple items
-* Automatic total calculation
-* Order status with enum
-* Get order by ID
-* List orders with pagination
-* Custom 404 error handling
-* Input validation
+* Criação de pedidos com múltiplos itens
+* Cálculo automático do valor total
+* Controle de status com Enum
+* Consulta de pedido por ID
+* Listagem de pedidos com paginação
+* Tratamento de erro 404 personalizado
+* Validação de dados de entrada
 
 ---
 
-## Project Structure
+## 📁 Estrutura do Projeto
 
 ```
 src/main/java/com/luqtta/
@@ -45,16 +45,18 @@ src/main/java/com/luqtta/
 
 ---
 
-## Running the Project
+## ▶️ Como Executar o Projeto
 
-### 1. Clone the repository
+### 1. Clonar o repositório
 
 ```
-git clone <your-repository-url>
+git clone <url-do-repositorio>
 cd order-management-api
 ```
 
-### 2. Run in dev mode
+---
+
+### 2. Executar em modo desenvolvimento
 
 Linux / Mac:
 
@@ -68,7 +70,9 @@ Windows:
 mvnw.cmd quarkus:dev
 ```
 
-### 3. Open Swagger UI
+---
+
+### 3. Acessar a documentação da API (Swagger)
 
 ```
 http://localhost:8080/q/swagger-ui
@@ -76,24 +80,24 @@ http://localhost:8080/q/swagger-ui
 
 ---
 
-## Database
+## 🗄️ Banco de Dados
 
-Uses **H2 in-memory database** for development.
+O projeto utiliza **H2 em memória** apenas para desenvolvimento.
 
-Important:
+Importante:
 
-* Data is lost when the application restarts
-* Schema is recreated automatically on startup
+* Os dados são perdidos ao reiniciar a aplicação
+* O esquema do banco é recriado automaticamente ao iniciar
 
 ---
 
-## API Endpoints
+## 🔗 Endpoints da API
 
-### Create Order
+### ➕ Criar Pedido
 
-POST `/orders`
+**POST** `/orders`
 
-Example request body:
+Exemplo de requisição:
 
 ```
 {
@@ -114,42 +118,42 @@ Example request body:
 }
 ```
 
-Response: `201 Created`
+Resposta: **201 Created**
 
 ---
 
-### Get Order By ID
+### 🔍 Buscar Pedido por ID
 
-GET `/orders/{id}`
+**GET** `/orders/{id}`
 
-Example:
+Exemplo:
 
 ```
 GET /orders/1
 ```
 
-Responses:
+Respostas possíveis:
 
-* 200 OK
-* 404 Not Found
+* 200 OK — Pedido encontrado
+* 404 Not Found — Pedido não encontrado
 
 ---
 
-### List Orders (Paginated)
+### 📄 Listar Pedidos (Paginado)
 
-GET `/orders?page=0&size=10`
+**GET** `/orders?page=0&size=10`
 
-Example:
+Exemplo:
 
 ```
 GET /orders?page=0&size=5
 ```
 
-Response: `200 OK`
+Resposta: **200 OK**
 
 ---
 
-## Error Response Example
+## ⚠️ Exemplo de Resposta de Erro
 
 ```
 {
@@ -162,32 +166,32 @@ Response: `200 OK`
 
 ---
 
-## What This Project Demonstrates
+## 🧠 Conceitos Demonstrados
 
-* REST API design
-* Domain modeling
-* One-to-many relationship mapping
-* Transaction handling
-* Input validation
-* Exception mapping
-* Pagination with Panache
-* JSON serialization control
-
----
-
-## Possible Future Improvements
-
-* Update order status endpoint
-* Cancel order endpoint
-* Payment simulation
-* Response DTOs
-* PostgreSQL integration
-* Docker support
-* Automated tests
-* Authentication / authorization
+* Desenvolvimento de API REST
+* Modelagem de domínio
+* Relacionamento One-to-Many (Pedido → Itens)
+* Transações com JPA
+* Validação de dados
+* Tratamento global de exceções
+* Paginação com Panache
+* Controle de serialização JSON
 
 ---
 
-## Author
+## 🔮 Possíveis Melhorias Futuras
+
+* Atualização de status do pedido
+* Endpoint de cancelamento
+* Simulação de pagamento
+* DTOs de resposta
+* Integração com PostgreSQL
+* Dockerização
+* Testes automatizados
+* Autenticação e autorização
+
+---
+
+## 👨‍💻 Autor
 
 Lucas Morais Souza
